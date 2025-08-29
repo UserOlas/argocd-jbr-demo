@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: mybootapp
-  replicas: 2
+  replicas: 4
   template:
     metadata:
       labels:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: mybootapp
-        image: sylw/jbr-demo:1.0.1
+        image: sylw/jbr-demo:1.0.0
         ports:
         - containerPort: 8080
