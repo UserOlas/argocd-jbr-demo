@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mybootapp
+spec:
+  selector:
+    matchLabels:
+      app: mybootapp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: mybootapp
+    spec:
+      containers:
+      - name: mybootapp
+        image: sylw/jbr-demo:1.0.1
+        ports:
+        - containerPort: 8080
